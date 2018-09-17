@@ -12,6 +12,6 @@ if [ -z $BASIC_AUTH_PASSWORD ]; then
   exit 1
 fi
 
-/usr/bin/htpasswd -bBc /etc/nginx/.htpasswd $BASIC_AUTH_USERNAME $BASIC_AUTH_PASSWORD
+/usr/bin/htpasswd -bc /etc/nginx/.htpasswd $BASIC_AUTH_USERNAME $BASIC_AUTH_PASSWORD
 
 exec nginx -g "daemon off;"
